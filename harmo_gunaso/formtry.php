@@ -233,9 +233,10 @@ if (isset($_POST['submit'])) {
         <footer>
             <p>
                 Already have an account?
-                <button><a href="#">Login Here</a></button>
+                <button><a href="logintry.php">Login Here</a></button>
             </p>
         </footer>
+        <a href="index.php"> Go To Home</a>
     </div>
 </body>
 

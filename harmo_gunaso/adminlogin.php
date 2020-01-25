@@ -210,7 +210,7 @@ if (!isset($_SESSION['admin_is_login'])) {
                     <input type="password" name="Password" id="Password" autofocus="on" />
                 </div>
 
-                <input type="submit" value="Login and raise your voice" name="login" />
+                <input type="submit" value="Login" name="login" />
 
                 <?php
                 if (isset($msg)) {

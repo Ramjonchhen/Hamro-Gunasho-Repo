@@ -4,16 +4,19 @@ include('dbConnection.php');
 
 if (isset($_POST['submit'])) {
 
+
+
     $reqinfo = $_POST['requestinfo'];
-    $descp = $_P0ST['descp'];
     $add1 = $_POST['add1'];
     $add2 = $_POST['add2'];
     $city = $_POST['city'];
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
     $date = $_POST['date'];
+    // $redder = $_POST['des'];
+    $describe = $_POST['describe'];
 
-    $query = "insert into submit_record(reqinfo,descp,add1,add2,city,email,mobile,date) values('$reqinfo','$descp','$add1','$add2','$city','$email','$mobile','$date')";
+    $query = "insert into submit_record(reqinfo,info,add1,add2,city,email,mobile,date) values('$reqinfo','$describe','$add1','$add2','$city','$email','$mobile','$date')";
 
     if ($conn->query($query) == true) {
         $message = "<div>Complain Submitted</div>";
@@ -82,15 +85,21 @@ if (isset($_POST['submit'])) {
                         <input type="text" class="form-control" id="inputRequestInfo" placeholder="Requester Info" name="requestinfo">
                     </div>
 
+                    <!-- <div class="form-group">
+                        <label for="dest">Problem Descreption </label> -->
+                    <!-- <input type="text" class="form-control" id="dest" placeholder="House no 123" name="des"> -->
+                    <!-- </div> -->
+
                     <div class="form-group">
-                        <label for="name">Descreption of the problem </label>
-                        <input type="text" class="form-control" id="name" placeholder="I have this problem" name="descp">
+                        <label for="address1">Problem Descreption</label>
+                        <input type="text" class="form-control" id="address1" placeholder="Descreption of the Complain" name="describe">
                     </div>
 
                     <div class="form-group">
                         <label for="address1">Address Line 1 </label>
                         <input type="text" class="form-control" id="address1" placeholder="House no 123" name="add1">
                     </div>
+
 
                     <div class="form-group">
                         <label for="address2">Address Line 2 </label>
